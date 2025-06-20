@@ -97,3 +97,9 @@ MIT License — Free to use, modify, and share.
 
 Made with ❤️ by **Kau (cow2studios)**  
 Follow me on [Twitter](https://twitter.com/cow2studios) for devlogs and updates.
+
+---
+
+## Credits
+
+- [Kenney Playing Cards](https://kenney.nl/assets/playing-cards-pack) for Card Images
