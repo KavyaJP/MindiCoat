@@ -66,7 +66,7 @@ res://
 
    ```bash
    git clone https://github.com/KavyaJP/MindiCoat.git
-   cd mindi-coat
+   cd MindiCoat
    ```
 
 2. Open the project in [Godot Engine](https://godotengine.org/) (version 4.x recommended)
