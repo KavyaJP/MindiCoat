@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://dl7ncc7ifd3nv"]
+
+[ext_resource type="Script" uid="uid://cthbmvo22iwqj" path="res://Scripts/game.gd" id="1_ebmjs"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_ebmjs")
+
+[node name="PlayerHand" type="HBoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PlayArea" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.994782, 1.00219)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer2D" parent="."]
