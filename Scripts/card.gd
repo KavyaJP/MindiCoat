@@ -10,17 +10,24 @@ func set_card_data(suit_name, rank_name, val, texture):
 	value = val
 	$TextureRect.texture = texture
 
-func _input_event(viewport, event, shape_idx):
+func _gui_input(event):
 	if event is InputEventMouseButton and event.pressed:
-		var play_area = get_tree().get_root().get_node("Game/PlayArea")
+		var game = get_tree().get_root().get_node("Game")
+
+		if game.current_turn != 1:
+			return  # Not player's turn
+
+		var play_area = game.get_node("PlayArea")
+
 		get_parent().remove_child(self)
 		play_area.add_child(self)
 
-		# If PlayArea is Control, use anchors/margins for positioning
-		if self is Control:
-			self.anchor_left = 0.5
-			self.anchor_top = 0.5
-			self.margin_left = -self.rect_size.x / 2
-			self.margin_top = -self.rect_size.y / 2
-		else:
-			self.rect_position = Vector2(500, 300)
+		await get_tree().process_frame  # Let the scene update
+
+		# Center the card manually using the size of PlayArea
+		var screen_size = get_viewport().get_visible_rect().size
+		var card_size = self.size
+		self.position = (screen_size - card_size) / 2
+
+		game.current_turn = 2
+		game.ai_play_card()
