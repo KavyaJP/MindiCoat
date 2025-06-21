@@ -4,6 +4,12 @@ A modern digital version of the classic Indian card game **Mindi Coat (Dehla Pak
 
 ---
 
+🎮 A small indie game by **cow2studios**
+
+🐄 Twitter: @cow2studios | 💌 cow2studios@gmail.com
+
+---
+
 ## 🎯 Features
 
 - 2D card game built from scratch in Godot
